@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="favicon.ico" rel="icon">
+    <title>Single page application</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="main-container">
+        <div class="app-container">
+            <div class="title center">Currency Converter</div>
+            <div class="flex-container">
+                <div>
+                    <label for="from">From</label>
+                    <select id="from" title="Select source currency" onchange="updateConversion('from')"></select>
+                </div>
+                <div>
+                </div>
+                <div>
+                    <label for="to">To</label>
+                    <select id="to" title="Select currency to convert to" onchange="updateConversion('from')"></select>
+                </div>
+            </div>
+            <div class="flex-container">
+                <div>
+                    <label for="fromAmount">Amount</label>
+                    <input type="text" id="fromAmount" title="Amount of the selected source currency" oninput="updateConversion('from')">
+                </div>
+                <div class="conversionSymbol">=</div>
+                <div>
+                    <label for="toAmount">Amount</label>
+                    <input type="text" id="toAmount" title="Amount of the converted currency" oninput="updateConversion('to')">
+                </div>
+            </div>
+            <div class="title center">Use currency data from</div>
+            <div class="flex-container">
+                <div>
+                    <label for="year">Year</label>
+                    <select id="year" title="Select the year to get currency exhange rates for" onchange="updateDates()"></select>
+                </div>
+                <div>
+                    <label for="month">Month</label>
+                    <select id="month" title="Select the month to get currency exhange rates for" onchange="updateDates()"></select>
+                </div>
+                <div>
+                    <label for="day">Day</label>
+                    <select id="day" title="Select the day to get currency exhange rates for" onchange="updateDates()"></select>
+                </div>
+            </div>
+            <div style="height:50px">
+                <img src="reset.png" id="reset" title="Reset date to latest date with available data" class="image-center" width="50" alt="Reset button" onClick="reset()">
+            </div>
+            <div class="center" style="margin-top:10px;font-size:15px;">
+                Currency data from api.exchangeratesapi.io
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,162 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    color: white;
+    background-color: white;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+}
+
+div {
+    width: 100%;
+}
+
+div.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.title {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+/* Main div containing everything */
+.main-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Container containing the apps elements */
+.app-container {
+    max-width: 750px;
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    margin-top: 10px;
+    padding: 0px;
+    background-color: DarkSlateGray;
+    border: 1px solid #000000;
+    border-radius: 15px;
+}
+
+/* Set CSS for the 4 flex containers */
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: DarkSlateGray;
+}
+
+.flex-container > div {
+    padding: 20px;
+}
+
+/* Align labels with the content below them */
+label {
+    display: block;
+    margin-bottom: 8px;
+    margin-left: 10px;
+}
+
+/* For the select (the "From" "To" and date elemnts) */
+select {
+    height: 50px;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    border: 1px solid DarkSlateGray;
+    border-radius: 15px;
+    color: black;
+    background-color: white;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    text-indent: 10px;
+}
+
+/* Give the select a subtle hover effect */
+select:hover {
+    border: 1px solid black;
+}
+
+/* For the input amounts */
+input {
+    height: 50px;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    border: 1px solid DarkSlateGray;
+    border-radius: 15px;
+    color: black;
+    background-color: white;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    -webkit-appearance: none;
+    margin: 0;
+    -moz-appearance: textfield;
+     outline: none;
+     text-indent: 10px;
+}
+
+/* Give the input a subtle hover effect */
+input:hover {
+    border: 1px solid black;
+}
+
+
+/* Remove number input arrows for Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+   margin: 0;
+}
+
+/* Remove the highlight effect when the input or select field is focused */
+input:focus, textarea:focus, select:focus{
+    outline: none;
+}
+
+/* For the output of the conversion (the "To" amount) */
+p {
+    display: flex;
+    align-items: center;
+    height: 25px;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    border: 0px solid white;
+    border-radius: 15px;
+    background-color: white;
+    font-family: Arial, sans-serif;
+    text-indent: 10px;
+    resize: none;
+}
+
+/* For the "=" sign in the middle of the application" */
+.conversionSymbol {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 75px;
+}
+
+/* Add a red border around a field if there's an error*/
+.error {
+    border: 1px solid red !important;
+}
