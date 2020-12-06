@@ -105,7 +105,7 @@ function updateConversion(side)
     else if (side === "to")
     {
         amount = parseFloat(document.getElementById("toAmount").value);
-        conversionAmount = ((toValue / fromValue) * amount).toFixed(2);
+        conversionAmount = ((fromValue / toValue) * amount).toFixed(2);
         document.getElementById("fromAmount").value = conversionAmount;
         if (isNaN(amount) || conversionAmount === "NaN"  || !checkInput("to"))
         {
